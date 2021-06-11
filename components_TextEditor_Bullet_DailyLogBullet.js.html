@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>components/TextEditor/Bullet/DailyLogBullet.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Collection.html">Collection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#closeCollection">closeCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#getSavedBullets">getSavedBullets</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#openCollection">openCollection</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DailyHabit.html">DailyHabit</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DailyLogBullet.html">DailyLogBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#keyDownListener">keyDownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="EventWrapper.html">EventWrapper</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#getBulletTree">getBulletTree</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#getStorageKey">getStorageKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#initialise">initialise</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#render">render</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="JournalIcon.html">JournalIcon</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module.html#.exports">exports</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Navbar.html">Navbar</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="SimpleBullet.html">SimpleBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SimpleBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SimpleBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TaskBullet.html">TaskBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#keyDownListener">keyDownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Tracker.html">Tracker</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCalendarDays">addCalendarDays</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#addClose">addClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCollection">addCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCurrentDate">addCurrentDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addFillerCircles">addFillerCircles</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#addForm">addForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addHabit">addHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#baseKeydownListener">baseKeydownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#baseKeyupListener">baseKeyupListener</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#bulletModifiers">bulletModifiers</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#bulletTypes">bulletTypes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#clearContainerNode">clearContainerNode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#closeAddForm">closeAddForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#closeForm">closeForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#createBullet">createBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#DATE">DATE</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteBullet">deleteBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteCollection">deleteCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteHabit">deleteHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#editColor">editColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#exitSingleNesting">exitSingleNesting</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#flyoutMenu">flyoutMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#focus">focus</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getDailyLogUID">getDailyLogUID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getFirstDay">getFirstDay</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getFormattedDate">getFormattedDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getHabits">getHabits</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthDays">getMonthDays</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthDaysLeap">getMonthDaysLeap</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthlyLogUID">getMonthlyLogUID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthName">getMonthName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getSavedBullets">getSavedBullets</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTheme">getTheme</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#hideMenu">hideMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#menuButton">menuButton</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#navSpan">navSpan</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#nestBulletInside">nestBulletInside</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#nestCurrBullet">nestCurrBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#openEditForm">openEditForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#openForm">openForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#populateEventWrappers">populateEventWrappers</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#removeHabit">removeHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEvents">saveEvents</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveInputs">saveInputs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveTasks">saveTasks</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#serialize">serialize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#setTaskEditor">setTaskEditor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#showMenu">showMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#showSave">showSave</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#submitAdd">submitAdd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#toggleHabit">toggleHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#TOP_LEVEL_ORDER_ID">TOP_LEVEL_ORDER_ID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#transferFocusTo">transferFocusTo</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/TextEditor/Bullet/DailyLogBullet.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import BaseBullet from './BaseBullet.js';
+import { bulletTypes, bulletModifiers } from './bulletTypes.js';
+
+const elementName = 'daily-log-bullet';
+const bulletParameters = {
+  value: 'value',
+  children: 'children',
+  type: 'type',
+  modifier: 'modifier',
+  completed: 'completed',
+}; // Stores keywords as defined while initialising BulletList
+
+const defaultParameters = {
+  value: '',
+  type: 'task',
+  modifier: 'none',
+  completed: false,
+};
+
+/**
+ * Bullet Class for Daily Log Page Bullet
+ */
+class DailyLogBullet extends BaseBullet {
+  constructor() {
+    super();
+    this.elementName = elementName;
+
+    this.state = {
+      nestDepthRem: 1,
+    };
+    Object.keys(defaultParameters).forEach((key) => {
+      this.state[key] = defaultParameters[key];
+    });
+
+    this.parameterSetMap = {};
+    this.parameterSetMap[bulletParameters.value] = (value) => this.setValue(value);
+    this.parameterSetMap[bulletParameters.type] = (value) => this.setBulletType(value);
+    this.parameterSetMap[bulletParameters.modifier] = (value) => this.setBulletModifier(value);
+    this.parameterSetMap[bulletParameters.completed] = (value) => this.setCompleted(value);
+
+    this.bulletStyle = `
+        * {
+            font-family: 'Manrope', sans-serif;
+        }
+        .box-bullet {
+        display: flex;
+        }
+
+        input[type=text] {
+            border: 1px solid transparent;
+            background: inherit;
+            font-size: 1.5rem;
+            width: 70%;
+        }
+        
+        div ${this.elementName} {
+            position: relative;
+            left: 2rem;
+        }
+
+        .type {
+        border: 1px solid transparent;
+        height: 1.5rem;
+        width: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+        align-self: center;
+        }
+
+        .type:hover {
+        border: 1px solid grey;
+        cursor: pointer;
+        }
+
+        .modifier {
+        border: 1px solid transparent;
+        height: 1rem;
+        width: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .modifier:hover {
+        border: 1px solid grey;
+        cursor: pointer;
+        }
+    `; // This is default style
+
+    const template = document.createElement('template');
+    template.innerHTML = `
+        &lt;style>${this.bulletStyle}&lt;/style>
+        &lt;div class="bullet">
+            &lt;div class="box-bullet"> 
+            &lt;div class="type">${bulletTypes[this.state.type]}&lt;/div>
+            &lt;input type="text" value="${this.state.value}" placeholder="Add thoughts here">&lt;/input>
+            &lt;/div>
+            &lt;div class="nested">&lt;/div>
+        &lt;/div>`;
+
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+    const inputElement = this.shadowRoot.querySelector('input');
+
+    const keysToWatch = [ // Keys used in keyboard shortcuts must be added here
+      'Tab',
+      'Enter',
+      'Backspace',
+      'Shift',
+      'Control',
+      's', // save
+      'X', // (with Shift) complete &amp; uncomplete toggle (strikethrough, remove strikethrough)
+      'i', // inspiration (italics)
+      'b', // priority (bold)
+      'r', // regular font style
+      'ArrowUp',
+      'ArrowDown',
+    ];
+    /**
+     * Listens for keyboard events that we are interested in and sets state properly.
+     * @param {string} key Key to adjust state for.
+     * @param {*} state New state to set for key.
+     */
+    const watchKeys = (key, state) => {
+      if (keysToWatch.includes(key)) {
+        this.keysPressed[key] = state;
+      }
+    };
+
+    let matched = false;
+    // Listeners for adjusting bullet formatting state.
+    inputElement.onkeydown = (e) => {
+      watchKeys(e.key, true);
+      matched = false;
+      if (!matched) matched = this.baseKeydownListener(e);
+      if (!matched) matched = this.keyDownListener();
+    };
+    inputElement.onkeyup = (e) => {
+      if (!matched) matched = this.baseKeyupListener();
+      if (!matched) this.editContent(bulletParameters.value, e.target.value);
+      watchKeys(e.key, false);
+    };
+  }
+
+  /**
+   * Initialises the bullet
+   * @param {*} bulletAttributes
+   * @param {Object} [ bulletAttributes.storageIndex ]
+   * @param {Array} [ bulletAttributes.data ] - Data as saved in storage
+   */
+  initialiseBullet(bulletAttributes) {
+    super.initialiseBullet(bulletAttributes);
+    let data = null;
+    let storageIndex;
+    if ('data' in bulletAttributes) {
+      data = bulletAttributes.data;
+      storageIndex = bulletAttributes.storageIndex;
+    }
+
+    Object.keys(defaultParameters).forEach((key) => {
+      this.state[key] = defaultParameters[key];
+      this.parameterSetMap[key]((data === null) ? defaultParameters[key] : data[storageIndex[key]]);
+    });
+
+    let typeCount = 1;
+    const typeList = ['none', 'task', 'note', 'event', 'theme'];
+    const type = this.shadowRoot.querySelector('.type');
+    if (!this.readOnly) {
+      type.addEventListener('click', () => {
+        typeCount += 1;
+        this.editContent(bulletParameters.type, typeList[typeCount % typeList.length]);
+      });
+    } else {
+      const inputText = this.shadowRoot.querySelector('input[type=text]');
+      inputText.setAttribute('placeholder', 'No text here');
+    }
+  }
+
+  /**
+   * Serializes the bullet into the format
+   * [content, completed, type, modifier, children]
+   * @returns Array of form [content, completed, type, modifier, children].
+   */
+  serialize() {
+    return [
+      this.state[bulletParameters.value],
+      this.state[bulletParameters.completed],
+      this.state[bulletParameters.type],
+      this.state[bulletParameters.modifier],
+      [], // Since bullets don't have access to their children, this should be updated by BulletList
+    ];
+  }
+
+  // Setters
+  setValue(value) {
+    this.state.value = value;
+    this.shadowRoot.querySelector('input').value = this.state.value;
+  }
+
+  setBulletType(type) {
+    this.state.type = type;
+    const bulletTypeContainer = this.shadowRoot.querySelector('.type');
+    bulletTypeContainer.innerHTML = bulletTypes[this.state.type];
+  }
+
+  setBulletModifier(modifier) {
+    if (modifier === this.state.modifier) { // Allow modifiers to be toggled
+      this.state.modifier = 'none';
+    } else {
+      this.state.modifier = modifier;
+    }
+    const inputElement = this.shadowRoot.querySelector('input');
+    Object.assign(inputElement.style, bulletModifiers[this.state.modifier]);
+  }
+
+  setCompleted(isComplete) {
+    this.state.completed = isComplete;
+
+    // Change DOM
+    const inputElement = this.shadowRoot.querySelector('input');
+    const newStrikeState = (isComplete) ? 'line-through' : 'none';
+    inputElement.style.setProperty('text-decoration', newStrikeState);
+  }
+
+  // Event Handlers
+  editContent(parameter, newValue) {
+    // Maps between parameter and its Set function
+    this.parameterSetMap[parameter](newValue);
+    this.updateCallbacks.editContent(parameter, this.uniqueID, this.state[parameter]);
+  }
+
+  // Additional keyboard listeners
+  /**
+   * Keydown keyboard listeners in addition to base listeners
+   *
+   * Shortcuts checked (in order):
+   * 1. Control + Shift + x
+   * 2. Control + r
+   * 3. Control + b
+   * 4. Control + i
+   *
+   * @returns {Boolean} true if shortcut was matched, false otherwise
+   */
+  keyDownListener() {
+    if (this.keysPressed.Control &amp;&amp; this.keysPressed.Shift &amp;&amp; this.keysPressed.X) {
+      this.editContent(bulletParameters.completed, !this.state.completed);
+    } else if (this.keysPressed.Control &amp;&amp; this.keysPressed.r) {
+      this.editContent(bulletParameters.modifier, 'none');
+    } else if (this.keysPressed.Control &amp;&amp; this.keysPressed.b) {
+      this.editContent(bulletParameters.modifier, 'priority');
+    } else if (this.keysPressed.Control &amp;&amp; this.keysPressed.i) {
+      this.editContent(bulletParameters.modifier, 'inspiration');
+    } else return false;
+    return true;
+  }
+}
+
+customElements.define(elementName, DailyLogBullet);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Fri Jun 11 2021 04:22:52 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>home-dailylog/scripts/dailyLog.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Collection.html">Collection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#closeCollection">closeCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#getSavedBullets">getSavedBullets</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Collection.html#openCollection">openCollection</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DailyHabit.html">DailyHabit</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DailyLogBullet.html">DailyLogBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#keyDownListener">keyDownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="DailyLogBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="EventWrapper.html">EventWrapper</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#getBulletTree">getBulletTree</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#getStorageKey">getStorageKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#initialise">initialise</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="EventWrapper.html#render">render</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="JournalIcon.html">JournalIcon</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module.html#.exports">exports</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Navbar.html">Navbar</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="SimpleBullet.html">SimpleBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SimpleBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SimpleBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TaskBullet.html">TaskBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#keyDownListener">keyDownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TaskBullet.html#serialize">serialize</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Tracker.html">Tracker</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCalendarDays">addCalendarDays</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#addClose">addClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCollection">addCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addCurrentDate">addCurrentDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addFillerCircles">addFillerCircles</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#addForm">addForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addHabit">addHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#baseKeydownListener">baseKeydownListener</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#baseKeyupListener">baseKeyupListener</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#bulletModifiers">bulletModifiers</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#bulletTypes">bulletTypes</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#clearContainerNode">clearContainerNode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#closeAddForm">closeAddForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#closeForm">closeForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#createBullet">createBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#DATE">DATE</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteBullet">deleteBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteCollection">deleteCollection</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#deleteHabit">deleteHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#editColor">editColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#exitSingleNesting">exitSingleNesting</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#flyoutMenu">flyoutMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#focus">focus</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getDailyLogUID">getDailyLogUID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getFirstDay">getFirstDay</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getFormattedDate">getFormattedDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getHabits">getHabits</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthDays">getMonthDays</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthDaysLeap">getMonthDaysLeap</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthlyLogUID">getMonthlyLogUID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getMonthName">getMonthName</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getSavedBullets">getSavedBullets</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTheme">getTheme</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#hideMenu">hideMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initialiseBullet">initialiseBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#menuButton">menuButton</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#navSpan">navSpan</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#nestBulletInside">nestBulletInside</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#nestCurrBullet">nestCurrBullet</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#openEditForm">openEditForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#openForm">openForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#populateEventWrappers">populateEventWrappers</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#removeHabit">removeHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEvents">saveEvents</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveInputs">saveInputs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveTasks">saveTasks</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#serialize">serialize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#setTaskEditor">setTaskEditor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#showMenu">showMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#showSave">showSave</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#submitAdd">submitAdd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#toggleHabit">toggleHabit</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#TOP_LEVEL_ORDER_ID">TOP_LEVEL_ORDER_ID</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#transferFocusTo">transferFocusTo</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">home-dailylog/scripts/dailyLog.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import colorThemes from '../../colorThemes.js';
+import {
+  colorStyleKey, habitsKey, getDailyLogUID, journalNameKey, themeKey,
+} from '../../storageKeys.js';
+
+// set color of website to the theme color
+let selectedColorStyle = localStorage.getItem(colorStyleKey);
+if (selectedColorStyle === null) selectedColorStyle = 'default';
+
+// Set Display CSS Styles
+const root = document.documentElement;
+root.style.setProperty('--light-bg', colorThemes[selectedColorStyle].background);
+root.style.setProperty('--main-bg', colorThemes[selectedColorStyle].main);
+
+/**
+ * Add current date to title.
+ */
+function addCurrentDate() {
+  const titleDate = document.querySelector('.date');
+  const DATE = new Date();
+  const currentDate = DATE.toLocaleString().split(',')[0];
+  titleDate.innerHTML = currentDate;
+}
+
+/**
+ * Gets the bullets saved for today's daily log.
+ *
+ * @param {string} storageKey key of today's daily log in localStorage.
+ * @returns The serialized array containing the bullet content for this daily log.
+ */
+function getSavedBullets(storageKey) {
+  // If nothing is stored, this is loaded : [content, completed, type, modifier, children]
+  const initialSetup = { 0: [1], 1: ['', false, 'task', 'none', []] };
+  let listDataTree = localStorage.getItem(storageKey);
+  if (listDataTree === null) {
+    listDataTree = initialSetup;
+  } else {
+    listDataTree = JSON.parse(listDataTree);
+  }
+  return listDataTree;
+}
+
+/**
+ * Get the title of the daily log.
+ */
+function getTitle() {
+  const title = document.querySelector('#header-title');
+  title.innerHTML = localStorage.getItem(journalNameKey);
+}
+
+/**
+ * Get the "theme" banner question for the day.
+ *
+ * TODO: Make this random with interesting theme questions.
+ */
+function getTheme() {
+  const themeQuestion = document.querySelector('.question');
+  const theme = localStorage.getItem(themeKey);
+  const text = `Please add what you did related to ${theme} as a theme bullet`;
+  themeQuestion.innerHTML = text;
+}
+
+/**
+ * Get month from Date object in full string form.
+ * @param {Date} date Date to get month for.
+ * @returns Name of month in string form.
+ */
+function getMonthName(date) {
+  return date.toLocaleString('default', { month: 'long' });
+}
+
+/**
+ * Gets the list of habit entries filled in for the current month.
+ * @returns The list of habit entries filled in for the current month.
+ */
+function getHabits() {
+  const DATE = new Date();
+  const currMonth = getMonthName(DATE);
+  const habitList = [];
+  // pull from storage the habits of the particular month
+  const habitKeys = JSON.parse(localStorage.getItem(habitsKey));
+  habitKeys.forEach((k) => {
+    if (k.startsWith(currMonth)) {
+      const habitEntry = JSON.parse(localStorage.getItem(k));
+      habitList.push(habitEntry);
+    }
+  });
+  return habitList;
+}
+
+/**
+ * Toggle completion for the provided habit name.
+ *
+ * @param {string} habit Name of habit to toggle completion for.
+ */
+function toggleHabit(habit) {
+  const DATE = new Date();
+  const today = DATE.getDate() - 1;
+  const habitKey = `${getMonthName(DATE)}${habit}`;
+  const habitEntry = localStorage.getItem(habitKey);
+  const { color, days } = JSON.parse(habitEntry);
+  const habitElem = document.getElementById(habit);
+  const circle = habitElem.shadowRoot.querySelector('#habit-circle');
+  if (days[today] === false) {
+    days[today] = true;
+    circle.style.backgroundColor = color;
+  } else {
+    days[today] = false;
+    circle.style.backgroundColor = '#dbdbdb';
+  }
+
+  // update storage
+  const habitStorage = {
+    habit, color, days: [...days],
+  };
+  localStorage.setItem(habitKey, JSON.stringify(habitStorage));
+}
+
+/**
+ * DOM Content Loaded
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const currDate = new Date();
+  const storageKey = getDailyLogUID(currDate);
+  const listDataTree = getSavedBullets(storageKey);
+
+  const list = document.querySelector('bullet-list');
+  list.initialiseList({
+    saveDataCallback: (data) => {
+      localStorage.setItem(storageKey, JSON.stringify(data));
+    },
+    nestLimit: 2,
+    bulletTree: listDataTree,
+    storageIndex: {
+      value: 0,
+      completed: 1,
+      type: 2,
+      modifier: 3,
+      children: 4,
+    },
+    elementName: 'daily-log-bullet',
+  });
+  addCurrentDate();
+  getTitle();
+  getTheme();
+
+  const DATE = new Date();
+  const habitBody = document.querySelector('.habits-form');
+
+  const habitList = getHabits();
+  habitList.forEach((habitEntry) => {
+    const habitElem = document.createElement('daily-habit');
+    habitElem.habit = habitEntry.habit;
+    habitElem.color = habitEntry.color;
+    const days = [...habitEntry.days];
+    const today = DATE.getDate() - 1;
+    const habitCircle = habitElem.shadowRoot.querySelector('#habit-circle');
+    if (days[today] === true) {
+      habitCircle.style.backgroundColor = habitElem.color;
+    }
+    habitCircle.addEventListener('click', () => {
+      toggleHabit(habitElem.habit);
+    });
+    habitBody.appendChild(habitElem);
+  });
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Fri Jun 11 2021 04:22:52 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
